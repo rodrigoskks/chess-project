@@ -9,6 +9,8 @@ namespace chess_console
         {
             Tabuleiro tabuleiro = new Tabuleiro(8, 8);
 
+            Tela.exibirTabuleiro(tabuleiro);
+
             Console.ReadLine();
 
 
