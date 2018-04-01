@@ -12,6 +12,7 @@ namespace tabuleiro
         public Cor cor { get; protected set; }
         public int quantidadeMovimentos { get; protected set; }
         public Tabuleiro tabuleiro { get; protected set; }
+
         public Peca(Tabuleiro tabuleiro, Cor cor)
         {
             this.posicao = null;

@@ -8,14 +8,24 @@ namespace chess_console
     {
         static void Main(string[] args)
         {
-            Tabuleiro tabuleiro = new Tabuleiro(8, 8);
+            try
+            {
+                PosicaoXadrez posicao = new PosicaoXadrez('c', 7);
+                Console.WriteLine(posicao);
+                Console.WriteLine(posicao.converteParaPosicao());
 
-            tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(0, 0));
-            tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(1, 3));
-            tabuleiro.colocarPeca(new Rei(tabuleiro, Cor.Preta), new Posicao(2, 4));
+                //    Tabuleiro tabuleiro = new Tabuleiro(8, 8);
 
-            Tela.exibirTabuleiro(tabuleiro);
+                //    tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(0, 0));
+                //    tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(1, 3));
+                //    tabuleiro.colocarPeca(new Rei(tabuleiro, Cor.Preta), new Posicao(0, 2));
 
+                //    Tela.exibirTabuleiro(tabuleiro);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             Console.ReadLine();
 
         }
