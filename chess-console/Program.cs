@@ -20,9 +20,22 @@ namespace chess_console
                 //tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Branca), new Posicao(3, 5));
 
                 PartidaDeXadrez partida = new PartidaDeXadrez();
+                while (!partida.partidaTerminada)
+                {
+
+                    Console.Clear();
+                    Tela.exibirTabuleiro(partida.tabuleiro);
+
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.lerPosicaoXadrez().converteParaPosicao();
 
 
-                Tela.exibirTabuleiro(partida.tabuleiro);
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.lerPosicaoXadrez().converteParaPosicao();
+
+                    partida.executaMovimento(origem, destino);
+                }
+
             }
             catch (Exception e)
             {
