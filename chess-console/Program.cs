@@ -10,17 +10,22 @@ namespace chess_console
         {
             try
             {
-                PosicaoXadrez posicao = new PosicaoXadrez('c', 7);
-                Console.WriteLine(posicao);
-                Console.WriteLine(posicao.converteParaPosicao());
+                //PosicaoXadrez posicao = new PosicaoXadrez('c', );
+                //Console.WriteLine(posicao);
+                //Console.WriteLine(posicao.converteParaPosicao());
 
-                //    Tabuleiro tabuleiro = new Tabuleiro(8, 8);
+                Tabuleiro tabuleiro = new Tabuleiro(8, 8);
 
-                //    tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(0, 0));
-                //    tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(1, 3));
-                //    tabuleiro.colocarPeca(new Rei(tabuleiro, Cor.Preta), new Posicao(0, 2));
+                tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(0, 0));
+                tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(1, 3));
+                tabuleiro.colocarPeca(new Rei(tabuleiro, Cor.Preta), new Posicao(0, 2));
 
-                //    Tela.exibirTabuleiro(tabuleiro);
+
+                tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Branca), new Posicao(3, 5));
+
+
+
+                Tela.exibirTabuleiro(tabuleiro);
             }
             catch (Exception e)
             {
