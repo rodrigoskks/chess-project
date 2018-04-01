@@ -20,6 +20,9 @@ namespace tabuleiro
             this.cor = cor;
             this.quantidadeMovimentos = 0;
         }
-
+        public void incrementarQuantidadeMovimentos()
+        {
+            quantidadeMovimentos++;
+        }
     }
 }

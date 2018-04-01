@@ -19,7 +19,7 @@ namespace chess_console
                     else
                     {
                         exibirPeca(tabuleiro.peca(i, j));
-                        Console.Write("");
+                        Console.Write(" ");
                     }
                 }
                 Console.WriteLine();
