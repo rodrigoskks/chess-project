@@ -26,6 +26,7 @@ namespace chess_console
                     Console.Clear();
                     Tela.exibirTabuleiro(partida.tabuleiro);
 
+                    Console.WriteLine();
                     Console.Write("Origem: ");
                     Posicao origem = Tela.lerPosicaoXadrez().converteParaPosicao();
 
