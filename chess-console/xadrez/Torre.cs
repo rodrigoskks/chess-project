@@ -27,7 +27,7 @@ namespace xadrez
         public override bool[,] movimentosPossiveis()
         {
             bool[,] matriz = new bool[tabuleiro.linhas, tabuleiro.colunas];
-            Posicao posicao = new Posicao(0, 0);
+           // Posicao posicao = new Posicao(0, 0);
 
             // acima
             posicao.definirValores(posicao.linha - 1, posicao.coluna);

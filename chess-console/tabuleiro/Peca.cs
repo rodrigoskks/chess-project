@@ -28,6 +28,7 @@ namespace tabuleiro
         public bool existeMovimentosPossiveis()
         {
             bool[,] matriz = movimentosPossiveis();
+
             for(int i=0; i < tabuleiro.linhas; i++)
             {
                 for (int j=0; j < tabuleiro.colunas; j++)

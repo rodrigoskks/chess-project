@@ -84,21 +84,13 @@ namespace chess_console
         }
 
         public static PosicaoXadrez lerPosicaoXadrez()
-        {
-            try
-            {
+        {            
                 string posicaoInformada = Console.ReadLine();
 
                 char coluna = posicaoInformada[0];
                 int linha = int.Parse(posicaoInformada[1] + "");
 
-                return new PosicaoXadrez(coluna, linha);
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-
+                return new PosicaoXadrez(coluna, linha);   
         }
 
         public static void exibirPeca(Peca peca)

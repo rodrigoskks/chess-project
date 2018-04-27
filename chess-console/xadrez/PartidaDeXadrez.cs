@@ -119,17 +119,17 @@ namespace xadrez
 
         private void colocarPecas()
         {
-            colocarNovaPeca('c', 1, new Torre(tabuleiro, Cor.Branca));
-            colocarNovaPeca('c', 2, new Torre(tabuleiro, Cor.Branca));
-            colocarNovaPeca('d', 2, new Torre(tabuleiro, Cor.Branca));
-            colocarNovaPeca('e', 2, new Torre(tabuleiro, Cor.Branca));
+            //colocarNovaPeca('c', 1, new Torre(tabuleiro, Cor.Branca));
+            //colocarNovaPeca('c', 2, new Torre(tabuleiro, Cor.Branca));
+            //colocarNovaPeca('d', 2, new Torre(tabuleiro, Cor.Branca));
+            //colocarNovaPeca('e', 2, new Torre(tabuleiro, Cor.Branca));
             colocarNovaPeca('e', 1, new Torre(tabuleiro, Cor.Branca));
             colocarNovaPeca('d', 1, new Rei(tabuleiro, Cor.Branca));
 
-            colocarNovaPeca('c', 7, new Torre(tabuleiro, Cor.Preta));
-            colocarNovaPeca('c', 8, new Torre(tabuleiro, Cor.Preta));
-            colocarNovaPeca('d', 7, new Torre(tabuleiro, Cor.Preta));
-            colocarNovaPeca('e', 7, new Torre(tabuleiro, Cor.Preta));
+            //colocarNovaPeca('c', 7, new Torre(tabuleiro, Cor.Preta));
+            //colocarNovaPeca('c', 8, new Torre(tabuleiro, Cor.Preta));
+            //colocarNovaPeca('d', 7, new Torre(tabuleiro, Cor.Preta));
+            //colocarNovaPeca('e', 7, new Torre(tabuleiro, Cor.Preta));
             colocarNovaPeca('e', 8, new Torre(tabuleiro, Cor.Preta));
             colocarNovaPeca('d', 8, new Rei(tabuleiro, Cor.Preta));
         }
