@@ -10,31 +10,37 @@ namespace chess_console
         {
             try
             {
-                //PosicaoXadrez posicao = new PosicaoXadrez('c', );
-                //Console.WriteLine(posicao);
-                //Console.WriteLine(posicao.converteParaPosicao());
-                //Tabuleiro tabuleiro = new Tabuleiro(8, 8);
-                //tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(0, 0));
-                //tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(1, 3));
-                //tabuleiro.colocarPeca(new Rei(tabuleiro, Cor.Preta), new Posicao(0, 2));
-                //tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Branca), new Posicao(3, 5));
-
                 PartidaDeXadrez partida = new PartidaDeXadrez();
+
                 while (!partida.partidaTerminada)
                 {
+                    try
+                    {
 
-                    Console.Clear();
-                    Tela.exibirTabuleiro(partida.tabuleiro);
+                        Console.Clear();
+                        Tela.exibirPartida(partida);
 
-                    Console.WriteLine();
-                    Console.Write("Origem: ");
-                    Posicao origem = Tela.lerPosicaoXadrez().converteParaPosicao();
+                        Console.WriteLine();
+                        Console.Write("Informe a Posição de Origem: ");
+                        Posicao origem = Tela.lerPosicaoXadrez().converteParaPosicao();
+                        partida.validarPosicaoDeOrigem(origem); 
 
+                        bool[,] posicoesPossiveis = partida.tabuleiro.peca(origem).movimentosPossiveis();
 
-                    Console.Write("Destino: ");
-                    Posicao destino = Tela.lerPosicaoXadrez().converteParaPosicao();
+                        Console.Clear();
+                        Tela.exibirTabuleiro(partida.tabuleiro, posicoesPossiveis);
 
-                    partida.executaMovimento(origem, destino);
+                        Console.WriteLine();
+                        Console.Write("Informe a Posição de Destino: ");
+                        Posicao destino = Tela.lerPosicaoXadrez().converteParaPosicao();
+
+                        partida.realizaJogada(origem, destino);
+                    }
+                    catch (TabuleiroException e)
+                    {
+                        Console.WriteLine(e.Message);
+                        Console.ReadLine();
+                    }
                 }
 
             }
